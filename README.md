@@ -82,6 +82,30 @@ The trained model is integrated into the FastAPI backend for real-time inference
 
 ---
 
+## 📸 Screenshots
+
+### Swagger API
+
+![Swagger API](screenshots/swagger.png)
+
+### Detection Result
+
+![Detection Result](screenshots/detection_result.png)
+
+### API Response
+
+![API Response](screenshots/api_response.png)
+
+### Training Results
+
+![Training Results](screenshots/training_results.png)
+
+### Confusion Matrix
+
+![Confusion Matrix](screenshots/confusion_matrix.png)
+
+---
+
 ## 🔮 Future Enhancements
 
 - User authentication

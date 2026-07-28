@@ -1,0 +1,220 @@
+.defect-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    margin:0;
+
+    text-align:left;
+
+    transition:.35s;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.defect-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:6px;
+    height:100%;
+
+    background:linear-gradient(#00d9ff,#2979ff);
+
+}
+
+.defect-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 20px 50px rgba(0,217,255,.18);
+
+}
+
+.defect-title{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:white;
+
+    margin-bottom:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.defect-title::before{
+
+    content:"🔍";
+
+    font-size:26px;
+
+}
+
+.defect-item{
+
+    color:#d7e4ef;
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+
+    font-size:16px;
+
+}
+
+.defect-item strong{
+
+    display:inline-block;
+
+    color:white;
+
+    min-width:180px;
+
+    font-weight:600;
+
+}
+
+/* ---------- Severity Badge ---------- */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:90px;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:14px;
+
+    letter-spacing:.4px;
+
+}
+
+/* ---------- High ---------- */
+
+.high{
+
+    background:linear-gradient(135deg,#ff4d6d,#ff1744);
+
+    box-shadow:0 0 18px rgba(255,77,109,.4);
+
+}
+
+/* ---------- Medium ---------- */
+
+.medium{
+
+    background:linear-gradient(135deg,#ffb300,#ff6f00);
+
+    box-shadow:0 0 18px rgba(255,179,0,.4);
+
+}
+
+/* ---------- Low ---------- */
+
+.low{
+
+    background:linear-gradient(135deg,#00e676,#00c853);
+
+    box-shadow:0 0 18px rgba(0,230,118,.35);
+
+}
+
+/* ---------- Information Blocks ---------- */
+
+.defect-item:nth-child(4),
+.defect-item:nth-child(5),
+.defect-item:nth-child(6),
+.defect-item:nth-child(7){
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:16px;
+
+    padding:18px;
+
+}
+
+/* ---------- Repair Recommendation ---------- */
+
+.defect-item:nth-child(6){
+
+    border-left:5px solid #00d9ff;
+
+    background:rgba(0,217,255,.08);
+
+}
+
+/* ---------- Inspection Tips ---------- */
+
+.defect-item:nth-child(7){
+
+    border-left:5px solid #00ffb3;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+.defect-card{
+
+padding:22px;
+
+}
+
+.defect-title{
+
+font-size:24px;
+
+}
+
+.defect-item strong{
+
+display:block;
+
+margin-bottom:6px;
+
+min-width:auto;
+
+}
+
+}

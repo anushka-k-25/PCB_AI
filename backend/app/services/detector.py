@@ -56,7 +56,11 @@ def detect(image_path):
             "inspection_tips": repair_info["inspection_tips"]
         })
 
-    annotated_image = Path(result.save_dir) / Path(image_path).name
+    output_dir = Path(result.save_dir)
+
+    image_files = list(output_dir.glob("*.jpg")) + list(output_dir.glob("*.jpeg")) + list(output_dir.glob("*.png"))
+
+    annotated_image = max(image_files, key=lambda f: f.stat().st_mtime)
 
     relative_path = annotated_image.relative_to(Path("runs").resolve())
 

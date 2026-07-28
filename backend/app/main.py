@@ -4,6 +4,9 @@ from app.api.health import router as health_router
 from app.core.config import settings
 from app.core.logger import logger
 from app.api.upload import router as upload_router
+from fastapi.middleware.cors import CORSMiddleware
+from pathlib import Path
+
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -11,6 +14,13 @@ app = FastAPI(
     version=settings.VERSION
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.on_event("startup")
 async def startup_event():
@@ -19,7 +29,11 @@ async def startup_event():
 
 app.include_router(health_router)
 app.include_router(upload_router)
-app.mount("/static", StaticFiles(directory="runs"), name="static")
+app.mount(
+    "/static",
+    StaticFiles(directory=Path(__file__).resolve().parent.parent / "runs"),
+    name="static",
+)
 
 @app.get("/")
 def root():
@@ -28,3 +42,4 @@ def root():
         "message": f"Welcome to {settings.APP_NAME}",
         "status": "Running"
     }
+

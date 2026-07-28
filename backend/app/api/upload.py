@@ -37,6 +37,7 @@ async def upload_image(file: UploadFile = File(...)):
     "success": True,
     "message": "Detection completed successfully.",
     "filename": file.filename,
-    "total_detections": len(results),
-    "detections": results
+    "total_detections": len(results["detections"]),
+    "detections": results["detections"],
+    "annotated_image": results["annotated_image"]
 }

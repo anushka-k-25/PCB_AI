@@ -13,7 +13,7 @@ function Home() {
       {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
-          🤖 PCB Inspector AI
+          PCB Inspector AI
         </div>
 
         <ul className="nav-links">
@@ -63,19 +63,19 @@ function Home() {
             <h3>Inspection Features</h3>
 
             <div className="feature">
-              ✅ AI Defect Detection
+              AI Defect Detection
             </div>
 
             <div className="feature">
-              📊 Confidence Analysis
+              Confidence Analysis
             </div>
 
             <div className="feature">
-              🔧 Repair Recommendation
+              Repair Recommendation
             </div>
 
             <div className="feature">
-              📄 PDF Report Generation
+              PDF Report Generation
             </div>
 
           </div>

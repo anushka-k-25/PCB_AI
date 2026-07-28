@@ -79,3 +79,16 @@ The object detection model was trained on the **DeepPCB** dataset using **YOLO11
 - Spurious Copper
 
 The trained model is integrated into the FastAPI backend for real-time inference.
+
+---
+
+## 🔮 Future Enhancements
+
+- User authentication
+- Detection history
+- PDF report generation
+- PCB repair recommendation engine
+- Cloud deployment
+- Live camera inspection
+- Batch image processing
+

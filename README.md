@@ -37,3 +37,45 @@ The system is designed to reduce manual inspection time and improve PCB quality 
 | Database | SQLite / PostgreSQL *(Planned)* |
 | Language | Python |
 | Version Control | Git & GitHub |
+---
+
+## 📂 Project Structure
+
+```text
+PCB_AI/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── core/
+│   │   ├── models/
+│   │   ├── services/
+│   │   └── main.py
+│   │
+│   ├── uploads/
+│   └── requirements.txt
+│
+├── training/
+│   ├── dataset/
+│   ├── runs/
+│   └── train.py
+│
+├── README.md
+└── .gitignore
+```
+---
+
+## 📊 Model Performance
+
+The object detection model was trained on the **DeepPCB** dataset using **YOLO11**.
+
+### Detection Capabilities
+
+- Missing Hole
+- Mouse Bite
+- Open Circuit
+- Short Circuit
+- Spur
+- Spurious Copper
+
+The trained model is integrated into the FastAPI backend for real-time inference.

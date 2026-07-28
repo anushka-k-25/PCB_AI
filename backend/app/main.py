@@ -29,9 +29,12 @@ async def startup_event():
 
 app.include_router(health_router)
 app.include_router(upload_router)
+RUNS_DIR = Path(__file__).resolve().parent.parent / "runs"
+RUNS_DIR.mkdir(parents=True, exist_ok=True)
+
 app.mount(
     "/static",
-    StaticFiles(directory=Path(__file__).resolve().parent.parent / "runs"),
+    StaticFiles(directory=RUNS_DIR),
     name="static",
 )
 

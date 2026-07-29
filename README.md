@@ -34,7 +34,6 @@ The system is designed to reduce manual inspection time and improve PCB quality 
 | Framework | PyTorch |
 | Image Processing | OpenCV |
 | Frontend | React + Vite *(Upcoming)* |
-| Database | SQLite / PostgreSQL *(Planned)* |
 | Language | Python |
 | Version Control | Git & GitHub |
 ---

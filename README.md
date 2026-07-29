@@ -105,6 +105,12 @@ The trained model is integrated into the FastAPI backend for real-time inference
 
 ---
 
+## 🎥 Demo Video
+
+Click the video below to watch the project demonstration.
+
+[▶️ Demo Video](screenshots/demo-video.mp4)
+
 ## 🔮 Future Enhancements
 
 - User authentication
